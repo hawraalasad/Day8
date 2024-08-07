@@ -49,4 +49,32 @@ let multi = filtered2.map((number) => {
   return number * 3;
 });
 console.log(multi);
+
 //Spicy part
+// let logger = array.forEach((number) => {
+//   number;
+// });
+
+const logger = (array) => {
+  array.forEach((element) => {
+    console.log(element);
+  });
+};
+
+logger([10, 20, 30, 40]);
+
+let temperatureC = (array) => {
+  let temp = array.map((number) => {
+    return (number - 32) * (5 / 9);
+  });
+  return temp;
+};
+console.log(
+  `Temperature in Celcius is`,
+  temperatureC([30, 40, 50, 20, 24, 76, 109, 180, 160, 132])
+);
+
+let temperatureHot = [40, 50, 66, 34, 25, 20];
+let hot = temperatureHot.filter((number) => number >= 35);
+
+console.log(hot);
